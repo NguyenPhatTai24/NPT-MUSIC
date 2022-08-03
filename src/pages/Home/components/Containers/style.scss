@@ -1,0 +1,209 @@
+.Color{
+    position: absolute;
+    background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00);
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: 0;
+}
+.Title{
+    position: absolute;
+    top: 50px;
+    font-size:50px;
+}
+.Rotate{
+    animation: RotateColor infinite 2s linear;
+    @keyframes RotateColor {
+        from{
+            transform: rotate(0);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+}
+.Container{
+    position: relative;
+    display: block;
+    background-color: whitesmoke;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    .MusicDisc{
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: none;
+        }
+    }
+    .ControlMusic{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.811);
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        overflow: hidden;
+        .Back,.Status,.Next{
+            display: flex;
+            cursor: pointer;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            width: 50px;
+            height:50px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            object-fit: fill;
+            margin: 0 10px;
+        }
+    }
+    .ShowControl{
+        height: 50px;
+    }
+    .DiscRotate{
+        animation: Rotate infinite 2s linear;
+        @keyframes Rotate {
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    }
+    .volume{
+        position:absolute;
+        right:0;
+        width: 130px;
+        height: 15px;
+        -webkit-appearance: none;
+        background: whitesmoke;
+        outline: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: whitesmoke;
+            cursor: pointer;
+            border: 4px solid #333;
+            box-shadow: -407px 0 0 400px #111;
+          }
+          
+    }
+    .MenuMusic{
+        cursor: pointer;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        right: 0;
+        margin: 10px 10px 0 0;
+    }
+} 
+.RotateMenuMusic{
+    animation: RotateMenu infinite 2s linear;
+    @keyframes RotateMenu {
+        from{
+            transform: rotate(0);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+}
+.ChangeColorBg{
+    background: linear-gradient(#fb009283,#0000ff66,#00ff0070,#ffff008c,#fb00928f,#0000ff61,#00ff006c,#ffff0076,#cd2c8a83);
+    background-repeat: repeat-y;
+    animation: Run infinite 2s linear;
+    @keyframes Run {
+        from{
+            background-position-y: 0;
+        }
+        to{
+            background-position-y: -500px;
+        }
+    }
+} 
+.Menu{
+    position: relative;
+    background: white;
+    width: 0;
+    height: 500px;
+    padding: 10px;
+    overflow-y:scroll;
+    scroll-behavior: smooth;
+    z-index: 1;
+    opacity: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    &::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        cursor: pointer;
+    }
+    &::-webkit-scrollbar-thumb{
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 5px;
+    }
+    .MenuItems{
+        position: relative;
+        width: 100%;
+        height: 70px;
+        background: white;
+        border:5px solid black;
+        border-radius: 5px;
+        margin: 5px 0;
+        overflow-x: hidden;
+        padding: 5px;
+        .Trash{
+            position: absolute;
+            width: 95%;
+            height: 80%;
+            background: transparent;
+        }
+        .NameAudio{
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .Order{
+            margin-top: 5px;
+            font-weight:200;
+            font-size: 15px;
+        }
+        &:hover{
+            cursor: pointer;
+            border:5px solid green;
+        }
+    }
+    
+}
+.showMenu{
+    width: 300px;
+    opacity: 1;
+    animation: showMenu 0.5s linear;
+    @keyframes showMenu {
+        0%{
+            width: 0;
+            opacity: 0;
+        }
+        100%{
+            width: 300px;
+            opacity: 1;
+        }
+    }
+}
