@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/NPT-MUSIC/static/css/main.970c9c28.css",
+    "main.js": "/NPT-MUSIC/static/js/main.820eff74.js",
+    "static/media/Music Disc.png": "/NPT-MUSIC/static/media/Music Disc.efc75dd94dccf9980a10.png",
+    "index.html": "/NPT-MUSIC/index.html",
+    "main.970c9c28.css.map": "/NPT-MUSIC/static/css/main.970c9c28.css.map",
+    "main.820eff74.js.map": "/NPT-MUSIC/static/js/main.820eff74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.970c9c28.css",
+    "static/js/main.820eff74.js"
+  ]
+}
